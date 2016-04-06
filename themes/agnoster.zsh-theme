@@ -162,6 +162,11 @@ prompt_hg() {
   fi
 }
 
+# Date: current date and time
+prompt_date() {
+  prompt_segment green black "%D{%Y%m%d %H:%M:%S}"
+}
+
 # Dir: current working directory
 prompt_dir() {
   prompt_segment blue black '%~'
@@ -195,6 +200,7 @@ build_prompt() {
   prompt_status
   prompt_virtualenv
   prompt_context
+  prompt_date
   prompt_dir
   prompt_git
   prompt_hg
